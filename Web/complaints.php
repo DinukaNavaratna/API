@@ -32,7 +32,7 @@
           </div>
         </div>
         <?php if($usertpe == 1 || $usertpe == 2) { ?>
-        <input id="complaint_msg" class="alert <?php if($usertpe == 1) {echo "alert-dark";} else {echo "alert-primary";} ?> alert-dismissible text-white" role="alert" style="margin-top: 3vh !important;"></input>
+        <input id="complaint_msg" class="alert <?php if($usertpe == 1) {echo "alert-dark";} else {echo "alert-dark";} ?> alert-dismissible text-white" role="alert" style="margin-top: 3vh !important;"></input>
         <button type="button" class="btn text-lg py-3" onclick="send_msg(<?php echo $userid.', '.$complaintid; ?>);">
           Send
         </button>
