@@ -145,9 +145,10 @@
                       </p>
                       <div class="d-flex align-items-center justify-content-between">
                         <?php if($edit){ ?>
-                          <button type="button" class="btn btn-outline-primary btn-sm mb-0">Upload Document</button>
+                          <input type="file" id="bd_file" style="display:none">
+                          <button type="button" class="btn btn-outline-primary btn-sm mb-0" onclick="document.getElementById('bd_file').click();">Upload Document</button>
                         <?php } else {?>
-                          <button type="button" class="btn btn-outline-primary btn-sm mb-0">View Document</button>
+                          <button type="button" class="btn btn-outline-primary btn-sm mb-0" onclick="window.open('files/bd.pdf')">View Document</button>
                         <?php } ?>
                       </div>
                     </div>
@@ -162,9 +163,10 @@
                       </p>
                       <div class="d-flex align-items-center justify-content-between">
                         <?php if($edit){ ?>
-                          <button type="button" class="btn btn-outline-primary btn-sm mb-0">Upload Document</button>
+                          <input type="file" id="cv_file" style="display:none">
+                          <button type="button" class="btn btn-outline-primary btn-sm mb-0" onclick="document.getElementById('cv_file').click();">Upload Document</button>
                         <?php } else {?>
-                          <button type="button" class="btn btn-outline-primary btn-sm mb-0">View Document</button>
+                          <button type="button" class="btn btn-outline-primary btn-sm mb-0" onclick="window.open('files/cv.pdf')">View Document</button>
                         <?php } ?>
                       </div>
                     </div>
@@ -179,9 +181,10 @@
                       </p>
                       <div class="d-flex align-items-center justify-content-between">
                         <?php if($edit){ ?>
-                          <button type="button" class="btn btn-outline-primary btn-sm mb-0">Upload Document</button>
+                          <input type="file" id="nic_file" style="display:none">
+                          <button type="button" class="btn btn-outline-primary btn-sm mb-0" onclick="document.getElementById('nic_file').click();">Upload Document</button>
                         <?php } else {?>
-                          <button type="button" class="btn btn-outline-primary btn-sm mb-0">View Document</button>
+                          <button type="button" class="btn btn-outline-primary btn-sm mb-0" onclick="window.open('files/nic.pdf')">View Document</button>
                         <?php } ?>
                       </div>
                     </div>
@@ -196,9 +199,10 @@
                       </p>
                       <div class="d-flex align-items-center justify-content-between">
                         <?php if($edit){ ?>
-                          <button type="button" class="btn btn-outline-primary btn-sm mb-0">Upload Document</button>
+                          <input type="file" id="other_file" style="display:none">
+                          <button type="button" class="btn btn-outline-primary btn-sm mb-0" onclick="document.getElementById('other_file').click();">Upload Document</button>
                         <?php } else {?>
-                          <button type="button" class="btn btn-outline-primary btn-sm mb-0">View Document</button>
+                          <button type="button" class="btn btn-outline-primary btn-sm mb-0" onclick="window.open('files/other.pdf')">View Document</button>
                         <?php } ?>
                       </div>
                     </div>
