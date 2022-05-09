@@ -42,7 +42,7 @@ class complaints(Resource):
                 response = "Complaint couldn't be recorded!"
 
             logger.info("Response | complaints_put: "+response)
-            return '{"msg":"'+msg+'", "response":"'+response+'", "user_id":"'+str(user_id)+'", "user_type":"'+str(user_type)+'"}'
+            return '{"msg":"'+msg+'", "response":"'+response+'"}'
         except Exception as e:
             msg = "failed"
             response = str(e)

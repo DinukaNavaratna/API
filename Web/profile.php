@@ -109,27 +109,31 @@
                 </div>
                 <div class="card-body p-3">
                   <ul class="list-group">
+                    <?php if($c1_id != ""){ ?>
                     <li class="list-group-item border-0 d-flex align-items-center px-0 mb-2 pt-0">
                       <div class="d-flex align-items-start flex-column justify-content-center">
-                        <h6 class="mb-0 text-sm">Topic</h6>
-                        <p class="mb-0 text-xs">Message message...</p>
+                        <h6 class="mb-0 text-sm"><?php if($c1_msg != ""){echo $c1_msg;} ?></h6>
+                        <p class="mb-0 text-xs"><?php if($c1_msg != ""){echo $c1_time;} ?></p>
                       </div>
-                      <a class="btn btn-link pe-3 ps-0 mb-0 ms-auto w-25 w-md-auto" href="javascript:;">Reply</a>
+                      <a class="btn btn-link pe-3 ps-0 mb-0 ms-auto w-25 w-md-auto" href="<?php if($c1_id != ""){echo "complaints.php?id=".$c1_id;}else{echo "#";} ?>">Reply</a>
                     </li>
+                    <?php } if($c2_id != ""){ ?>
                     <li class="list-group-item border-0 d-flex align-items-center px-0 mb-2 pt-0">
                       <div class="d-flex align-items-start flex-column justify-content-center">
-                        <h6 class="mb-0 text-sm">Topic</h6>
-                        <p class="mb-0 text-xs">Message message...</p>
+                        <h6 class="mb-0 text-sm"><?php if($c2_msg != ""){echo $c2_msg;} ?></h6>
+                        <p class="mb-0 text-xs"><?php if($c2_msg != ""){echo $c2_time;} ?></p>
                       </div>
-                      <a class="btn btn-link pe-3 ps-0 mb-0 ms-auto w-25 w-md-auto" href="javascript:;">Reply</a>
+                      <a class="btn btn-link pe-3 ps-0 mb-0 ms-auto w-25 w-md-auto" href="<?php if($c2_id != ""){echo "complaints.php?id=".$c2_id;}else{echo "#";} ?>">Reply</a>
                     </li>
+                    <?php } if($c3_id != ""){ ?>
                     <li class="list-group-item border-0 d-flex align-items-center px-0 mb-2 pt-0">
                       <div class="d-flex align-items-start flex-column justify-content-center">
-                        <h6 class="mb-0 text-sm">Topic</h6>
-                        <p class="mb-0 text-xs">Message message...</p>
+                        <h6 class="mb-0 text-sm"><?php if($c3_msg != ""){echo $c3_msg;} ?></h6>
+                        <p class="mb-0 text-xs"><?php if($c3_msg != ""){echo $c3_time;} ?></p>
                       </div>
-                      <a class="btn btn-link pe-3 ps-0 mb-0 ms-auto w-25 w-md-auto" href="javascript:;">Reply</a>
+                      <a class="btn btn-link pe-3 ps-0 mb-0 ms-auto w-25 w-md-auto" href="<?php if($c3_id != ""){echo "complaints.php?id=".$c3_id;}else{echo "#";} ?>">Reply</a>
                     </li>
+                    <?php } ?>
                   </ul>
                 </div>
               </div>

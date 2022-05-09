@@ -64,7 +64,11 @@
             success:function(response){
                 console.log("Resss: "+response);
                 if(response == "success"){
-                  window.location.replace("complaints.php?id=1");
+                  if(complaintid == 0){
+                    window.location.replace("profile.php");
+                  } else {
+                    window.location.replace("complaints.php?id="+complaintid);
+                  }
                 }
             },
             error: function (jqXHR, exception) {

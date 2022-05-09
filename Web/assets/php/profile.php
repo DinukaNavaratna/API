@@ -44,6 +44,15 @@ $industry = "";
 $highest_education = "";
 $expected_salary = "";
 $profile_status = "";
+$c1_id = "";
+$c1_msg = "";
+$c1_time = "";
+$c2_id = "";
+$c2_msg = "";
+$c2_time = "";
+$c3_id = "";
+$c3_msg = "";
+$c3_time = "";
 $imageurl = "https://static.vecteezy.com/system/resources/thumbnails/005/544/718/small/profile-icon-design-free-vector.jpg";
 
 
@@ -70,6 +79,15 @@ if ($result === FALSE) {
   $lastname = $json['lname'];
   $email = $json['email'];
   $fullname = $json['fname']." ".$json['lname'];
+  $c1_id = $json['c1_id'];
+  $c1_msg = $json['c1_msg'];
+  $c1_time = $json['c1_time'];
+  $c2_id = $json['c2_id'];
+  $c2_msg = $json['c2_msg'];
+  $c2_time = $json['c2_time'];
+  $c3_id = $json['c3_id'];
+  $c3_msg = $json['c3_msg'];
+  $c3_time = $json['c3_time'];
 }
 
 

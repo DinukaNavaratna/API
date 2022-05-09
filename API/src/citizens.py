@@ -114,6 +114,15 @@ class get_user_1(Resource):
         lname = ""
         email = ""
         reg_date = ""
+        c1_id = ""
+        c1_time = ""
+        c1_msg = ""
+        c2_id = ""
+        c2_time = ""
+        c2_msg = ""
+        c3_id = ""
+        c3_time = ""
+        c3_msg = ""
 
 
         try:
@@ -124,6 +133,22 @@ class get_user_1(Resource):
                 lname = select_response[0][1]
                 email = select_response[0][2]
                 reg_date = select_response[0][3]
+
+                select_response1 = ExecuteSelectQuery.execute("SELECT complaint_id, message, curent_timestamp FROM complaint_msgs WHERE user_id='"+user_id+"' GROUP BY complaint_id LIMIT 3;")
+            
+                if(len(select_response) > 0):
+                    try:
+                        c1_id = select_response1[0][0]
+                        c1_msg = select_response1[0][1]
+                        c1_time = select_response1[0][2]
+                        c2_id = select_response1[1][0]
+                        c2_msg = select_response1[1][1]
+                        c2_time = select_response1[1][2]
+                        c3_id = select_response1[2][0]
+                        c3_msg = select_response1[2][1]
+                        c3_time = select_response1[2][2]
+                    except:
+                        pass
                 msg = "success"
                 response = "User found!"
             else:
@@ -131,7 +156,7 @@ class get_user_1(Resource):
                 response = "User not found!"
 
             logger.info("Response | get_user_1: "+response)
-            returnVal = '{"msg":"'+msg+'", "response":"'+response+'", "fname":"'+str(fname)+'", "lname":"'+str(lname)+'", "email":"'+str(email)+'", "reg_date":"'+str(reg_date)+'"}'
+            returnVal = '{"msg":"'+msg+'", "response":"'+response+'", "fname":"'+str(fname)+'", "lname":"'+str(lname)+'", "email":"'+str(email)+'", "reg_date":"'+str(reg_date)+'", "c1_id":"'+str(c1_id)+'", "c1_msg":"'+str(c1_msg)+'", "c1_time":"'+str(c1_time)+'", "c2_id":"'+str(c2_id)+'", "c2_msg":"'+str(c2_msg)+'", "c2_time":"'+str(c2_time)+'", "c3_id":"'+str(c3_id)+'", "c3_msg":"'+str(c3_msg)+'", "c3_time":"'+str(c3_time)+'"}'
 
             return returnVal
         except Exception as e:
