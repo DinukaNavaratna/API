@@ -31,7 +31,7 @@ class create_db(Resource):
                 cur.execute("CREATE TABLE IF NOT EXISTS complaints (id INT AUTO_INCREMENT PRIMARY KEY, user_id INT, complaint_subject VARCHAR(50), curent_timestamp TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP);")
                 cur.execute("CREATE TABLE IF NOT EXISTS complaint_msgs (id INT AUTO_INCREMENT PRIMARY KEY, complaint_id INT, user_id INT, message VARCHAR(255), curent_timestamp TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP);")
                 cur.execute("INSERT IGNORE INTO user_types (user_type) VALUES ('Citizen'), ('Bureau Officer'), ('Foreign Company');")
-                cur.execute("INSERT IGNORE INTO users (fname, lname, email, user_password, user_type) VALUES ('Officer1', 'Lname1', 'officer1@gmail.com', '202cb962ac59075b964b07152d234b70', 2), ('Employee1', 'Company', 'staff1@gmail.com', '202cb962ac59075b964b07152d234b70', 3), ('User1', 'Last', 'user1@gmail.com', '202cb962ac59075b964b07152d234b70', 1);")
+                cur.execute("INSERT IGNORE INTO users (fname, lname, email, user_password, user_type) VALUES ('Officer1', 'Lname1', 'officer1@gmail.com', '202cb962ac59075b964b07152d234b70', 2), ('Employee1', 'Company', 'staff1@gmail.com', '202cb962ac59075b964b07152d234b70', 3);")
                 conn.commit()
                 cur.close()
                 conn.close()

@@ -18,7 +18,7 @@ if($_SESSION["user_type"] != "1"){
     }
     $editable = False;
     $edit = False;
-} else if($_SESSION["user_type"] != "2"){
+} else if($_SESSION["user_type"] != "2" && $_SESSION["user_type"] != "3"){
     $show_approve = True;
 }
 
