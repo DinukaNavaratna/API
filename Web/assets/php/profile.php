@@ -1,6 +1,7 @@
 <?php
 
 $userid = $_SESSION["user_id"];
+$user_type = $_SESSION["user_type"];
 $editable = True;
 $show_approve = False;
 $approved = False;
@@ -18,7 +19,7 @@ if($_SESSION["user_type"] != "1"){
     }
     $editable = False;
     $edit = False;
-} else if($_SESSION["user_type"] != "2" && $_SESSION["user_type"] != "3"){
+} else if($user_type == "2"){
     $show_approve = True;
 }
 

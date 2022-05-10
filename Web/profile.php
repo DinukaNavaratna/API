@@ -24,7 +24,7 @@
           </div>
           <div class="col-lg-4 col-md-6 my-sm-auto ms-sm-auto me-sm-0 mx-auto mt-3">
             <div class="nav-wrapper position-relative end-0" onclick="<?php if($approved){echo "approval('disapprove', $userid);";}else{echo "approval('approve', $userid);";} ?>">
-              <?php if(!$show_approve){ ?>
+              <?php if($show_approve){ ?>
                 <ul class="nav nav-pills nav-fill p-1" role="tablist">
                   <li class="nav-item">
                     <button class="nav-link mb-0 px-0 py-1 " title="<?php if($approved){echo "Disapprove this profile";}else{echo "Approve this profile";} ?>">
@@ -115,7 +115,7 @@
                         <h6 class="mb-0 text-sm"><?php if($c1_msg != ""){echo $c1_msg;} ?></h6>
                         <p class="mb-0 text-xs"><?php if($c1_msg != ""){echo $c1_time;} ?></p>
                       </div>
-                      <a class="btn btn-link pe-3 ps-0 mb-0 ms-auto w-25 w-md-auto" href="<?php if($c1_id != ""){echo "complaints.php?id=".$c1_id;}else{echo "#";} ?>">Reply</a>
+                      <a class="btn btn-link pe-3 ps-0 mb-0 ms-auto w-25 w-md-auto" href="<?php if($c1_id != ""){echo "complaints.php?id=".$c1_id;}else{echo "#";} ?>"><?php if($user_type == 3){echo "View";}else{echo "Reply";} ?></a>
                     </li>
                     <?php } if($c2_id != ""){ ?>
                     <li class="list-group-item border-0 d-flex align-items-center px-0 mb-2 pt-0">
@@ -123,7 +123,7 @@
                         <h6 class="mb-0 text-sm"><?php if($c2_msg != ""){echo $c2_msg;} ?></h6>
                         <p class="mb-0 text-xs"><?php if($c2_msg != ""){echo $c2_time;} ?></p>
                       </div>
-                      <a class="btn btn-link pe-3 ps-0 mb-0 ms-auto w-25 w-md-auto" href="<?php if($c2_id != ""){echo "complaints.php?id=".$c2_id;}else{echo "#";} ?>">Reply</a>
+                      <a class="btn btn-link pe-3 ps-0 mb-0 ms-auto w-25 w-md-auto" href="<?php if($c2_id != ""){echo "complaints.php?id=".$c2_id;}else{echo "#";} ?>"><?php if($user_type == 3){echo "View";}else{echo "Reply";} ?></a>
                     </li>
                     <?php } if($c3_id != ""){ ?>
                     <li class="list-group-item border-0 d-flex align-items-center px-0 mb-2 pt-0">
@@ -131,7 +131,7 @@
                         <h6 class="mb-0 text-sm"><?php if($c3_msg != ""){echo $c3_msg;} ?></h6>
                         <p class="mb-0 text-xs"><?php if($c3_msg != ""){echo $c3_time;} ?></p>
                       </div>
-                      <a class="btn btn-link pe-3 ps-0 mb-0 ms-auto w-25 w-md-auto" href="<?php if($c3_id != ""){echo "complaints.php?id=".$c3_id;}else{echo "#";} ?>">Reply</a>
+                      <a class="btn btn-link pe-3 ps-0 mb-0 ms-auto w-25 w-md-auto" href="<?php if($c3_id != ""){echo "complaints.php?id=".$c3_id;}else{echo "#";} ?>"><?php if($user_type == 3){echo "View";}else{echo "Reply";} ?></a>
                     </li>
                     <?php } ?>
                   </ul>
